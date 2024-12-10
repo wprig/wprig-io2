@@ -1,0 +1,141 @@
+/**
+ * Custom styles for the front-page.php template.
+ */
+
+.site-header {
+	margin-bottom: 0;
+}
+
+.front-header {
+	padding: 2em 0 1em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	text-align: center;
+	line-height: 2em;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: url('/wp-content/themes/wprigio/images/head-bg-dark.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.front-logo {
+	display: none;
+}
+
+@media screen and (min-width: 48em) {
+	.front-logo {
+		display: block;
+	}
+}
+
+.front-logo {
+	padding: 0 0 2em;
+	width: 6em;
+}
+
+.front-tagline {
+	padding: 0 2em .5em;
+	font-size: 2em;
+}
+
+.front-cta-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.front-cta {
+	display: block;
+	margin: 1.5em .5em;
+	padding: 0 1.2em .2em;
+	border-radius: 5px;
+	color: white;
+	line-height: 1.8em;
+	text-decoration: none;
+	background-color: #2a92d0;
+	border: 2px solid transparent;
+	-webkit-transition: border-color .3s;
+	transition: border-color .3s;
+}
+
+.front-cta:hover,
+.front-cta:focus,
+.front-cta:visited {
+	color: white;
+	border-color: white;
+}
+
+.wceu-promo {
+	padding: 1em 1em .8em;
+	background: #F8BF39;
+	text-align: center;
+}
+
+.wceu-promo a {
+	color: #333;
+	text-decoration: none;
+}
+
+.wceu-promo h3 {
+	margin: 0;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.wceu-promo em {
+	text-decoration: underline;
+}
+
+
+.entry-content {
+	margin-top: 0;
+}
+
+@media screen and (min-width: 60em) {
+
+	.wp-block-columns {
+		padding: 1em 0;
+		grid-template-rows: minmax(1em, auto);
+	}
+
+	.wp-block-columns p {
+		margin: 0;
+	}
+}
+
+.install-steps {
+	list-style-type: none;
+}
+
+.install-steps li {
+	position: relative;
+	margin-bottom: 1.4em;
+	padding: 0 1em;
+	border: 1px solid #d7d7d7;
+	border-radius: 5px;
+}
+
+.install-steps li::after {
+	position: absolute;
+	bottom: -1.5em;
+	content: "⇣";
+}
+
+.install-steps li:last-child::after {
+	content: none;
+}
