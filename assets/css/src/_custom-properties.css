@@ -22,8 +22,9 @@
 	--font-size-larger: calc(48 / var(--global-font-size) * 1rem);
 
 	/* Colors */
-	--global-font-color: #333;
-	--border-color-dark: #333;
+	--global-font-color: #dedede;
+	--color-theme-background: #333;
+	--border-color-dark: #dedede;
 	--border-color-light: #ccc;
 	--color-link: #0073aa;
 	--color-link-visited: #333;

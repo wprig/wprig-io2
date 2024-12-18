@@ -198,6 +198,7 @@ select {
 
 .site-header {
 	padding-bottom: 1em;
+	background: var(--color-theme-background);
 }
 
 .header-image {
@@ -211,12 +212,31 @@ select {
 
 .custom-logo-link {
 	display: inline-block;
-	margin: 0 auto 1em;
+	margin: .5em auto;
 }
 
 .site-branding {
 	text-align: center;
-	padding: 60px 0 1.75em;
+	padding: .5em 0;
+	justify-self: start;
+
+	svg#wp-rig-logo {
+		max-width: 100px;
+		opacity: .9;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 1;
+
+			#logo-i-square {
+				fill: #2a92d0;
+			}
+		}
+		path {
+			fill: #fff;
+			transition: fill 0.3s ease;
+		}
+	}
 
 	@media screen and (max-width: 600px) {
 		padding: 1.75em 0;
@@ -247,6 +267,21 @@ select {
 	line-height: 1.4;
 	word-wrap: break-word;
 	color: #757575;
+}
+
+header#masthead:has(nav) {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "logo menu";
+	align-items: center;
+	justify-items: center;
+	padding: 0 5em;
+	margin: 0 auto;
+}
+
+nav#site-navigation {
+	justify-self: self-end;
 }
 
 @media (--narrow-menu-query) {
@@ -468,7 +503,7 @@ nav div.wp-block-navigation__responsive-dialog {
 		position: absolute;
 		top: 100%;
 		flex-direction: column;
-		background: #fff;
+		background: var(--color-theme-background);
 		margin-left: 0;
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		z-index: 100;
@@ -577,11 +612,13 @@ nav div.wp-block-navigation__responsive-dialog {
 	padding: 0.5em 1em 0.5em 0;
 	text-decoration: none;
 	color: var(--global-font-color);
+	opacity: .8;
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	text-decoration: underline;
+	text-decoration: none;
+	opacity: 1;
 }
 
 .main-navigation .current-menu-item > a,
