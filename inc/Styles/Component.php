@@ -31,7 +31,7 @@ use function comments_open;
 use function get_comments_number;
 use function apply_filters;
 use function add_query_arg;
-
+// checking something.
 /**
  * Class for managing stylesheets.
  *
