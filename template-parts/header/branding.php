@@ -10,7 +10,7 @@ namespace WP_Rig\WP_Rig;
 ?>
 
 <div class="site-branding">
-	<?php the_custom_logo(); ?>
+	<?php echo wp_remote_get( get_theme_file_uri() . '/assets/svg/wprig_logo.svg' )['body']; ?>
 
 	<?php
 	if ( is_front_page() && is_home() ) {
