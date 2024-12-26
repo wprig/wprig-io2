@@ -75,6 +75,7 @@
 .site {
 	margin: 0 auto;
 	max-width: 100%;
+	background: var(--color-theme-background-dark);
 }
 
 @media (--sidebar-query) {
@@ -95,6 +96,7 @@
 	.site-main {
 		grid-column: 1;
 		min-width: 0;
+		background: var(--color-theme-background-dark);
 	}
 
 	.primary-sidebar {
@@ -198,7 +200,7 @@ select {
 
 .site-header {
 	padding-bottom: 1em;
-	background: var(--color-theme-background);
+	background: var(--color-theme-background-main);
 }
 
 .header-image {
@@ -221,7 +223,7 @@ select {
 	justify-self: start;
 
 	svg#wp-rig-logo {
-		max-width: 100px;
+		max-width: 70px;
 		opacity: .9;
 		transition: opacity 0.3s ease;
 
@@ -278,10 +280,12 @@ header#masthead:has(nav) {
 	justify-items: center;
 	padding: 0 5em;
 	margin: 0 auto;
+	width: 100%;
 }
 
 nav#site-navigation {
 	justify-self: self-end;
+	margin: 0;
 }
 
 @media (--narrow-menu-query) {
@@ -503,7 +507,7 @@ nav div.wp-block-navigation__responsive-dialog {
 		position: absolute;
 		top: 100%;
 		flex-direction: column;
-		background: var(--color-theme-background);
+		background: var(--color-theme-background-main);
 		margin-left: 0;
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		z-index: 100;

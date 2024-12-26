@@ -23,7 +23,8 @@
 
 	/* Colors */
 	--global-font-color: #dedede;
-	--color-theme-background: #333;
+	--color-theme-background-main: #252525;
+	--color-theme-background-dark: #161616;
 	--border-color-dark: #dedede;
 	--border-color-light: #ccc;
 	--color-link: #0073aa;
