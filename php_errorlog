@@ -1,0 +1,20 @@
+[08-Oct-2018 21:11:31 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/wprig366/public_html/wp-content/themes/wprigio/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/wprig366/public_html/wp-content/themes/wprigio/index.php on line 15
+[14-Oct-2018 21:29:08 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/wprig366/public_html/wp-content/themes/wprigio/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/wprig366/public_html/wp-content/themes/wprigio/index.php on line 15
+[19-Jul-2020 05:50:15 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/mor10356/public_html/wprig/wp-content/themes/wprigio/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/mor10356/public_html/wprig/wp-content/themes/wprigio/index.php on line 15
+[10-Sep-2020 17:05:38 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/mor10356/public_html/wprig/wp-content/themes/wprigio/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/mor10356/public_html/wprig/wp-content/themes/wprigio/index.php on line 15
+[14-Oct-2022 04:02:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/customer/www/wprig.io/public_html/wp-content/themes/wprigio2/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/wprig.io/public_html/wp-content/themes/wprigio2/index.php on line 15
