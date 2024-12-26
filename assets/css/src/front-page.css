@@ -53,3 +53,19 @@
 	}
 
 }
+
+.lightning-css-logo {
+	&:root {
+		--gold-shadow: lch(80% 82.34 80.104 / .7);
+	}
+
+	svg {
+		filter: drop-shadow(0 0 5px var(--color-theme-yellow)) drop-shadow(0 0 20px var(--color-theme-yellow));
+		grid-area: logo;
+		place-self: center end;
+		width: 100px;
+		path {
+			fill: lch(100% 82.34 80.104);
+		}
+	}
+}

@@ -1,33 +1,12 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Imports
-	# Blocks
-	# Media
-		# Captions
-		# Galleries (Legacy)
+/* --------------------------------------------------------------
 # Post and page content
-	# Alignments
-	# Custom block colors
-	# Custom font sizes
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Imports
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 @import "_blocks.css";
 @import "_media.css";
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Post and page content
---------------------------------------------------------------*/
-
-/* Custom rule  for sticky posts:
-.sticky {
-
-}
-*/
-
+-------------------------------------------------------------- */
 .entry {
 	margin-bottom: 1rem;
 }
@@ -71,6 +50,7 @@
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
 	max-width: var(--content-width);
+	font-family: var(--global-font-family);
 }
 
 .page-header,
@@ -102,7 +82,6 @@
 }
 
 @media (--content-query) {
-
 	.entry-content > ul,
 	.entry-content > ol {
 		padding-left: 2.5em;
@@ -131,16 +110,15 @@
 }
 
 @media (--content-query) {
-
 	.entry-footer {
 		padding-right: 0;
 		padding-left: 0;
 	}
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 ## Alignments
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 .alignleft {
 	float: left;
 	margin-right: 1.5rem;
@@ -179,7 +157,6 @@
 }
 
 @media (--content-query) {
-
 	.page-content > .alignleft,
 	.entry-content > .alignleft,
 	.entry-summary > .alignleft {
@@ -194,7 +171,6 @@
 }
 
 @media (--sidebar-query) {
-
 	.has-sidebar .page-content > .alignleft,
 	.has-sidebar .entry-content > .alignleft,
 	.has-sidebar .entry-summary > .alignleft {
@@ -208,9 +184,9 @@
 	}
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 ## Custom block colors.
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 .has-theme-primary-color {
 	color: var(--color-theme-primary);
@@ -300,9 +276,9 @@
 	background-color: var(--color-custom-sun);
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 ## Custom block font sizes.
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 .has-small-font-size {
 	font-size: var(--font-size-small);
@@ -318,4 +294,100 @@
 
 .has-larger-font-size {
 	font-size: var(--font-size-larger);
+}
+
+/* --------------------------------------------------------------
+## Cards
+-------------------------------------------------------------- */
+
+.card {
+	position: relative;
+	width: 350px;
+	height: 400px;
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(10px);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	overflow: hidden;
+
+	img {
+		max-height: 150px;
+		width: auto;
+	}
+}
+
+.card::before {
+	content: "";
+	position: absolute;
+	width: 150%;
+	height: 150%;
+	background: linear-gradient(to right, #ff3c7b, #40c9ff);
+	animation: animate 4s linear infinite;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.card:hover::before {
+	opacity: 1;
+}
+
+@keyframes animate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.card .content {
+	position: relative;
+	width: 96%;
+	height: 96%;
+	background: #1c1c1c;
+	border-radius: 10px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 1;
+}
+
+.card .content h2 {
+	color: #ff3c7b;
+	font-size: 3em;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.card .content h3 {
+	color: #fff;
+	font-size: 1.8em;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.card .content p {
+	color: #999;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.card .content a {
+	display: inline-block;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: #fff;
+	background: linear-gradient(to right, #ff3c7b, #40c9ff);
+	border-radius: 25px;
+	transition: 0.5s;
+}
+
+.card .content a:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 20px rgba(255, 60, 123, 0.4);
 }
