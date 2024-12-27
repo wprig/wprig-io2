@@ -82,6 +82,7 @@
 }
 
 @media (--content-query) {
+
 	.entry-content > ul,
 	.entry-content > ol {
 		padding-left: 2.5em;
@@ -110,6 +111,7 @@
 }
 
 @media (--content-query) {
+
 	.entry-footer {
 		padding-right: 0;
 		padding-left: 0;
@@ -157,6 +159,7 @@
 }
 
 @media (--content-query) {
+
 	.page-content > .alignleft,
 	.entry-content > .alignleft,
 	.entry-summary > .alignleft {
@@ -171,6 +174,7 @@
 }
 
 @media (--sidebar-query) {
+
 	.has-sidebar .page-content > .alignleft,
 	.has-sidebar .entry-content > .alignleft,
 	.has-sidebar .entry-summary > .alignleft {
@@ -300,10 +304,14 @@
 ## Cards
 -------------------------------------------------------------- */
 
+.gb-container.features {
+	gap: 1em;
+}
+
 .card {
 	position: relative;
 	width: 350px;
-	height: 400px;
+	height: 450px;
 	background: rgba(255, 255, 255, 0.05);
 	backdrop-filter: blur(10px);
 	border-radius: 15px;
@@ -317,13 +325,33 @@
 		max-height: 150px;
 		width: auto;
 	}
+
+	h3 {
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	p {
+		margin:0;
+		padding: 0;
+		font-size: 16px;
+	}
+	.wp-block-image {
+		min-height: 150px;
+	}
+
+	.lightning-css-logo .icon-container {
+		margin: 0 auto;
+		padding: 20px 0;
+	}
 }
 
 .card::before {
 	content: "";
 	position: absolute;
-	width: 150%;
-	height: 150%;
+	width: 175%;
+	height: 175%;
 	background: linear-gradient(to right, #ff3c7b, #40c9ff);
 	animation: animate 4s linear infinite;
 	opacity: 0;
@@ -335,6 +363,7 @@
 }
 
 @keyframes animate {
+
 	0% {
 		transform: rotate(0deg);
 	}
@@ -353,7 +382,6 @@
 	padding: 30px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	z-index: 1;
 }
 
@@ -367,7 +395,7 @@
 .card .content h3 {
 	color: #fff;
 	font-size: 1.8em;
-	font-weight: 400;
+	font-weight: 700;
 	margin-bottom: 10px;
 }
 
