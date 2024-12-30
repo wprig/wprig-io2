@@ -272,6 +272,19 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					return 'front-page.php' === basename( $template );
 				},
 			),
+			//
+			'wp-rig-documentation-index' => array(
+				'file'             => 'documentation-index.min.css',
+				'preload_callback' => function () {
+					return strpos( $_SERVER['REQUEST_URI'], '/documentation/' ) !== false;
+				},
+			),
+			'wp-rig-courses-index' => array(
+				'file'             => 'courses-index.min.css',
+				'preload_callback' => function () {
+					return strpos( $_SERVER['REQUEST_URI'], '/course/' ) !== false;
+				},
+			),
 		);
 
 		/**

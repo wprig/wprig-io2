@@ -7,6 +7,8 @@
 
 namespace WP_Rig\WP_Rig;
 
+
+
 /**
  * Provides access to all available template tags of the theme.
  *

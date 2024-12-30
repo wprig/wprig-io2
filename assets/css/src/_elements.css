@@ -80,3 +80,15 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+
+pre, pre.wp-block-code {
+	background: var(--color-theme-background-main);
+	border-radius: 1.25em;
+	border-color: #424242;
+	font-size: 1em;
+
+	code {
+		font-size: .8em;
+		color: #cbcbcb;
+	}
+}

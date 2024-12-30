@@ -1,0 +1,119 @@
+/**
+ * Documentation pages styles
+ *
+ **/
+.documentation-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	line-height: 2;
+	padding: 2em 0 1em;
+	color: var(--color-theme-white);
+	background-image: url(/wp-content/themes/wprigio/images/head-bg-dark.jpg);
+	background-size: cover;
+	background-position: 50%;
+}
+
+.documentation-tagline {
+	padding: 0 2em 0.5em;
+	font-size: 2em;
+}
+
+.doc-item a, .box-category a {
+	text-decoration: none;
+}
+
+input.search-submit {
+	position: relative;
+	top: -3px;
+	margin: 0 .5em 1.5em;
+	padding: 0 1.2em .2em;
+	font-size: 17px;
+	line-height: 1.8;
+	color: var(--color-theme-white);
+	text-decoration: none;
+	background-color: var(--color-link-active);
+	border: 2px solid transparent;
+	transition: border-color .3s;
+	border-radius: 5px;
+
+	input.search-submit:focus, input.search-submit:hover, input.search-submit:visited {
+		color:var(--color-theme-white);
+		border-color: var(--color-theme-white);
+	}
+}
+
+.cat-grid {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, 175px);
+	grid-gap: 1em;
+	padding-left: 1em!important;
+	padding-right: 1em!important;
+	margin-top: 1em;
+
+	.cat-item {
+		display: flex;
+		border: 1px solid var(--color-theme-white);
+		border-radius: 0 0 0 1em;
+		text-align: center;
+		background: var(--color-theme-white);
+
+		&:hover {
+			border: 1px solid var(--color-link-active);
+		}
+
+		a {
+			padding: 1em;
+			text-align: center;
+			text-decoration: none;
+			width: 100%;
+		}
+	}
+}
+
+.course-by-cat article, .course-item {
+	display: flex;
+	border: 1px solid var(--color-theme-white);
+	border-radius: 0 0 0 1em;
+}
+
+
+
+a.doc-cat-link:hover > h2 {
+	color: var(--color-link-active);
+}
+
+h3.doc-title {
+	display: inline;
+	font-weight: 400;
+}
+
+.doc-cta {
+	position: relative;
+	padding: .5em 1em;
+	font-weight: 400;
+	color: var(--color-link-active);
+	background-color: var(--color-theme-background-main);
+	border-top: 1px solid var(--color-theme-white);
+	transition: all .5s;
+}
+
+.doc-cta::after{
+	position: absolute;
+	right: 0.5em;
+	content: "\2192";
+	font-size: 1.5em;
+	line-height: 25px;
+}
+
+a:hover .doc-cta{
+	background-color:var(--color-link-active);
+	color: var(--color-theme-white);
+}
+
+a:hover .doc-cta h3 {
+	color: var(--color-theme-white);
+}

@@ -48,6 +48,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		add_filter( 'embed_defaults', array( $this, 'filter_embed_dimensions' ) );
 		add_filter( 'theme_scandir_exclusions', array( $this, 'filter_scandir_exclusions_for_optional_templates' ) );
 		add_filter( 'script_loader_tag', array( $this, 'filter_script_loader_tag' ), 10, 2 );
+		add_filter('block_template_skip_theme', function ($skip, $template_type, $templates) {
+			return true; // Use block templates for everything else.
+		}, 10, 3);
 	}
 
 	/**

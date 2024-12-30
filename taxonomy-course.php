@@ -198,7 +198,8 @@ get_header(); ?>
 	if ( have_posts() ) :
 
 		/* Display the appropriate header when required. */
-		wprig_index_header();
+		//wprig_index_header();
+		WP_Rig\WP_Rig\wp_rig()->index_header();
 
 		?>
 
@@ -229,7 +230,7 @@ get_header(); ?>
 
 	</section><!-- .course-grid -->
 
-	
+
 
 		<?php
 		the_posts_navigation();
