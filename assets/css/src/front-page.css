@@ -64,6 +64,10 @@
 		grid-area: logo;
 		place-self: center end;
 		width: 100px;
+
+		@media(--narrow-menu-query){
+			width: 45px;
+		}
 		path {
 			fill: lch(100% 82.34 80.104);
 		}

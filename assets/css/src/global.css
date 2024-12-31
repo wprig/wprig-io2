@@ -407,7 +407,7 @@ nav div.wp-block-navigation__responsive-dialog {
 			& .primary-menu-container {
 				position: absolute;
 				z-index: -5;
-				background: #fff;
+				background: var(--color-theme-background-main);
 				width: 100vw;
 				top: 300px;
 				left: 0;
@@ -428,7 +428,7 @@ nav div.wp-block-navigation__responsive-dialog {
 				}
 
 				& .primary-menu-container {
-					top: 180px;
+					top: 150px;
 					z-index: 5;
 					opacity: 1;
 					transition: opacity 0.3s ease, top 0.3s ease-out;
@@ -750,7 +750,27 @@ nav div.wp-block-navigation__responsive-dialog {
 			}
 		}
 	}
+
+	header#masthead.site-header:has(nav) {
+		padding: 0;
+		gap: 1em;
+
+		.site-branding {
+			justify-self: end;
+			padding: 10px;
+			margin-right: 1em;
+		}
+	}
+
+	nav#site-navigation button.menu-toggle {
+		svg {
+			fill: var(--color-theme-white);
+		}
+	}
+
 }
+
+
 
 
 /*--------------------------------------------------------------

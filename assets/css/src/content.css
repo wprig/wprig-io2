@@ -137,6 +137,13 @@
 	font-size: 0.8em;
 }
 
+.single-post .entry {
+	.post-thumbnail img {
+		max-height: 300px;
+		width: auto;
+	}
+}
+
 /* --------------------------------------------------------------
 ## Alignments
 -------------------------------------------------------------- */
@@ -327,6 +334,12 @@
 /* --------------------------------------------------------------
 ## Cards
 -------------------------------------------------------------- */
+.gb-container {
+
+	@media(--narrow-menu-query){
+		flex-direction: column;
+	}
+}
 
 .gb-container.features {
 	gap: 1em;
@@ -344,6 +357,10 @@
 	align-items: center;
 	transition: 0.5s;
 	overflow: hidden;
+
+	@media(--narrow-menu-query){
+		margin: auto;
+	}
 
 	img {
 		max-height: 150px;
