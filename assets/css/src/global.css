@@ -502,8 +502,8 @@ nav div.wp-block-navigation__responsive-dialog {
 		display: block;
 	}
 
-	.nav--toggle-sub ul ul {
-		display: none;
+	.nav--toggle-sub ul ul.sub-menu {
+		display: block;
 		position: absolute;
 		top: 100%;
 		flex-direction: column;
@@ -511,6 +511,11 @@ nav div.wp-block-navigation__responsive-dialog {
 		margin-left: 0;
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		z-index: 100;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transform: translateY(-10px);
+		transition: opacity 0.5s ease, transform 0.5s ease;
 	}
 
 	.nav--toggle-sub .dropdown,
@@ -575,6 +580,11 @@ nav div.wp-block-navigation__responsive-dialog {
 	.nav--toggle-sub li.menu-item--toggled-on > ul,
 	.nav--toggle-sub li:not(.menu-item--has-toggle):focus > ul {
 		display: block;
+		box-shadow: 0 5px 10px #00000078;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		transform: translateY(0);
 	}
 
 	/*

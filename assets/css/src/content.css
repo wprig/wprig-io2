@@ -20,6 +20,9 @@
 
 .entry-meta {
 	margin: 1em 0;
+	span {
+		margin-right: 1em;
+	}
 }
 
 /* Hides the update date and time. */
@@ -133,6 +136,7 @@
 
 	h2 {
 		margin-top: 0;
+		margin-bottom: .5em;
 	}
 }
 
@@ -332,6 +336,15 @@
 
 .has-larger-font-size {
 	font-size: var(--font-size-larger);
+}
+
+/* --------------------------------------------------------------
+## Showcase
+-------------------------------------------------------------- */
+#wprig-showcase {
+	p.gb-headline-text {
+		font-size: .8em;
+	}
 }
 
 /* --------------------------------------------------------------
