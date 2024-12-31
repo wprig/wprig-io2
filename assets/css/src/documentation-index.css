@@ -61,7 +61,7 @@ input.search-submit {
 		text-align: center;
 		background: var(--color-theme-white);
 
-		&:hover {
+		&:hover, &:focus {
 			border: 1px solid var(--color-link-active);
 		}
 
@@ -82,7 +82,7 @@ input.search-submit {
 
 
 
-a.doc-cat-link:hover > h2 {
+a.doc-cat-link:hover > h2, a.doc-cat-link:focus > h2 {
 	color: var(--color-link-active);
 }
 
@@ -109,11 +109,11 @@ h3.doc-title {
 	line-height: 25px;
 }
 
-a:hover .doc-cta{
+a:hover .doc-cta, a:focus .doc-cta {
 	background-color:var(--color-link-active);
 	color: var(--color-theme-white);
 }
 
-a:hover .doc-cta h3 {
+a:hover .doc-cta h3, a:focus .doc-cta h3 {
 	color: var(--color-theme-white);
 }

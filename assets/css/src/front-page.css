@@ -63,7 +63,7 @@
 		filter: drop-shadow(0 0 5px var(--color-theme-yellow)) drop-shadow(0 0 20px var(--color-theme-yellow));
 		grid-area: logo;
 		place-self: center end;
-		width: 100px;
+		width: 60px;
 
 		@media(--narrow-menu-query){
 			width: 45px;

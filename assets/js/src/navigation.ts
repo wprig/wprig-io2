@@ -128,7 +128,7 @@ function setMenuHeight(): void {
 function watchForWindowSizeChanges(): void {
 	window.addEventListener('resize', () => {
 		const width = window.innerWidth;
-		const mobileBreakPoint = 55;
+		const mobileBreakPoint = 57;
 		const emValue = width / parseFloat(getComputedStyle(document.documentElement).fontSize);
 		if (emValue > mobileBreakPoint) {
 			closeAllSubMenus();

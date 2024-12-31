@@ -21,7 +21,7 @@ browserSync.create();
 
 // Check if the current environment is development or production
 // eslint-disable-next-line no-undef
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.npm_lifecycle_event === 'dev';
 
 async function buildJS() {
 	try {

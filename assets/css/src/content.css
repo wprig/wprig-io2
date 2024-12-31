@@ -118,10 +118,13 @@
 	}
 }
 
-.blog .entry-header {
+.blog article.has-post-thumbnail .entry-header{
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 	gap: 1em;
+}
+
+.blog .entry-header {
 
 	.post-thumbnail img {
 		width: auto;
@@ -459,4 +462,14 @@
 .card .content a:hover {
 	transform: scale(1.1);
 	box-shadow: 0 0 20px rgba(255, 60, 123, 0.4);
+}
+
+/* --------------------------------------------------------------
+## Forms
+-------------------------------------------------------------- */
+.wpforms-container, div.wpforms-container-full {
+
+	@media (--narrow-menu-query){
+		margin: 2em;
+	}
 }

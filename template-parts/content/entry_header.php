@@ -9,7 +9,7 @@ namespace WP_Rig\WP_Rig;
 
 ?>
 
-<header class="entry-header">
+<header class="entry-header<?php echo (has_post_thumbnail() ? ' has-thumb' : '')?>">
 
 	<?php if ( has_post_thumbnail() ) { ?>
 	<div class="entry-thumbnail">
