@@ -14,6 +14,7 @@ import { exec } from 'child_process';
 import { paths, isProd } from './constants.js';
 import through2 from "through2";
 import removeWpCliBlock from "./removeWpCliBlock.js";
+import { getStringReplacementTasks } from './utils.js';
 
 /**
  * PHP Build Task.
@@ -63,6 +64,7 @@ export default function php(runPhpcs, done) {
 		// Only do string replacements and save PHP files when building for production
 		return pump([
 			src(paths.php.src),
+			getStringReplacementTasks(),
 			through2.obj(function (file, enc, callback) {
 				// remove wp cli block from functions.php
 				if (file.isBuffer() && file.relative === 'functions.php') { // Adjust this check as necessary.

@@ -54,7 +54,7 @@ class Component implements Component_Interface {
 			get_theme_file_uri( '/assets/js/navigation.min.js' ),
 			array(),
 			wp_rig()->get_asset_version( get_theme_file_path( '/assets/js/navigation.min.js' ) ),
-			false
+			true
 		);
 		wp_script_add_data( 'wp-rig-navigation', 'async', true );
 		wp_script_add_data( 'wp-rig-navigation', 'precache', true );
