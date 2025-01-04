@@ -42,6 +42,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * Adds the action and filter hooks to integrate with WordPress.
 	 */
 	public function initialize() {
+		error_log('sdlksdn');
 		add_action( 'after_setup_theme', array( $this, 'action_essential_theme_support' ) );
 		add_action( 'wp_head', array( $this, 'action_add_pingback_header' ) );
 		add_filter( 'body_class', array( $this, 'filter_body_classes_add_hfeed' ) );

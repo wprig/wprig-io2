@@ -109,7 +109,7 @@ function initNavToggleSmall(): void {
  * @return {void} Does not return a value.
  */
 function setMenuHeight(): void {
-	if (window.outerWidth <= 800) {
+	if (window.outerWidth > 0 && window.outerWidth <= 800) {
 		const docHeight = document.body.scrollHeight;
 		const menuElement = document.querySelector<HTMLElement>('.primary-menu-container');
 		if (menuElement) {

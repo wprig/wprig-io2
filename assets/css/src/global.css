@@ -222,7 +222,7 @@ select {
 	padding: .5em 0;
 	justify-self: start;
 
-	svg#wp-rig-logo {
+	svg#wprigio-logo {
 		max-width: 70px;
 		opacity: .9;
 		transition: opacity 0.3s ease;

@@ -142,6 +142,7 @@ class Theme {
 			new Base_Support\Component(),
 			new Editor\Component(),
 			new Accessibility\Component(),
+			new Base_Support\Component(),
 			new Image_Sizes\Component(),
 			new PWA\Component(),
 			new Comments\Component(),
