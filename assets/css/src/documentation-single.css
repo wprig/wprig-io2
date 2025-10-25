@@ -1,0 +1,140 @@
+/* Scoped styles for documentation single layout */
+.wprig-doc-single {
+  --gap: 24px;
+  --border: #e5e7eb;
+  --muted: #6b7280;
+
+  & .doc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+    align-items: start;
+  }
+
+  & .doc-left, & .doc-right {
+    background: #252525;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+
+    & h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+  }
+
+  & .doc-left {
+    & .menu {
+      max-height: calc(100vh - 160px);
+      overflow: auto;
+      position: sticky;
+      top: 80px;
+    }
+
+    & .cat {
+      margin: 16px 0 0;
+    }
+
+    & .cat-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin: 8px 0;
+      color: #fff;
+    }
+
+    & ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    & li {
+      margin: 0;
+    }
+
+    & a {
+      display: block;
+      padding: 6px 8px;
+      border-radius: 6px;
+      color: var(--color-link);
+      text-decoration: none;
+
+      &:hover {
+        background: #f3f4f6;
+      }
+
+      &.is-current {
+        background: #111827;
+        color: #fff;
+      }
+    }
+  }
+
+  & .doc-right {
+    & .toc {
+      max-height: calc(100vh - 160px);
+      overflow: auto;
+      position: sticky;
+      top: 80px;
+    }
+
+    & .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      & li {
+        margin: 2px 0;
+
+        &[data-level="2"] {
+          margin-left: 0;
+        }
+
+        &[data-level="3"] {
+          margin-left: 10px;
+        }
+
+        &[data-level="4"] {
+          margin-left: 18px;
+        }
+
+        &[data-level="5"] {
+          margin-left: 26px;
+        }
+
+        &[data-level="6"] {
+          margin-left: 34px;
+        }
+      }
+
+      & a {
+        display: block;
+        padding: 4px 6px;
+        color: var(--color-link);
+        text-decoration: none;
+        border-radius: 4px;
+
+        &:hover {
+          background: #f3f4f6;
+        }
+      }
+    }
+  }
+
+  & .doc-center article {
+    background: #252525;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wprig-doc-single .doc-grid {
+    grid-template-columns: 280px minmax(0, 1fr) 300px;
+  }
+}

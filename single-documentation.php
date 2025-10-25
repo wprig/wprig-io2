@@ -85,35 +85,7 @@ function wprig_doc_extract_headings_with_ids( $html ) {
 		?>
 
 		<style>
-			/* Scoped styles for documentation single layout */
-			.wprig-doc-single { --gap: 24px; --border: #e5e7eb; --muted: #6b7280; }
-			.wprig-doc-single .doc-grid { display: grid; grid-template-columns: 1fr; gap: var(--gap); align-items: start; }
-			.wprig-doc-single .doc-left, .wprig-doc-single .doc-right { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
-			.wprig-doc-single .doc-left, .wprig-doc-single .doc-right { position: relative; }
-			.wprig-doc-single .doc-left .menu, .wprig-doc-single .doc-right .toc { max-height: calc(100vh - 160px); overflow: auto; position: sticky; top: 80px; }
-			.wprig-doc-single .doc-center article { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 24px; }
-			.wprig-doc-single .doc-left h2, .wprig-doc-single .doc-right h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 8px; }
-			.wprig-doc-single .doc-left .cat { margin: 16px 0 0; }
-			.wprig-doc-single .doc-left .cat-title { font-size: 13px; font-weight: 600; margin: 8px 0; color: #111827; }
-			.wprig-doc-single .doc-left ul { list-style: none; padding: 0; margin: 0; }
-			.wprig-doc-single .doc-left li { margin: 0; }
-			.wprig-doc-single .doc-left a { display: block; padding: 6px 8px; border-radius: 6px; color: #1f2937; text-decoration: none; }
-			.wprig-doc-single .doc-left a:hover { background: #f3f4f6; }
-			.wprig-doc-single .doc-left a.is-current { background: #111827; color: #fff; }
 
-			.wprig-doc-single .doc-right .toc-list { list-style: none; padding: 0; margin: 0; }
-			.wprig-doc-single .doc-right .toc-list li { margin: 2px 0; }
-			.wprig-doc-single .doc-right .toc-list a { display: block; padding: 4px 6px; color: #1f2937; text-decoration: none; border-radius: 4px; }
-			.wprig-doc-single .doc-right .toc-list a:hover { background: #f3f4f6; }
-			.wprig-doc-single .doc-right .toc-list li[data-level="2"] { margin-left: 0; }
-			.wprig-doc-single .doc-right .toc-list li[data-level="3"] { margin-left: 10px; }
-			.wprig-doc-single .doc-right .toc-list li[data-level="4"] { margin-left: 18px; }
-			.wprig-doc-single .doc-right .toc-list li[data-level="5"] { margin-left: 26px; }
-			.wprig-doc-single .doc-right .toc-list li[data-level="6"] { margin-left: 34px; }
-
-			@media (min-width: 1024px) {
-				.wprig-doc-single .doc-grid { grid-template-columns: 280px minmax(0, 1fr) 300px; }
-			}
 		</style>
 
 		<section class="wprig-doc-single">
