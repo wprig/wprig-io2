@@ -14,20 +14,24 @@
       "live": true,
       "proxyURL": "wprig.test:8888",
       "bypassPort": "8181",
-      "https": false
+      "https": false,
+      "keyPath": "",
+      "certPath": "",
+      "devPort": 3000
     },
     "styles": {
       "stage": 3,
       "autoprefixer": {
         "grid": false
       },
-      "importFrom": [
+      "preload": [
         "_custom-media.css"
       ],
       "features": {
         "custom-media-queries": true,
         "custom-properties": true,
-        "nesting-rules": true
+        "nesting-rules": true,
+        "mobile-nav-type": "modern"
       }
     },
     "debug": {
@@ -35,6 +39,10 @@
       "scripts": false,
       "phpcs": true
     }
+  },
+  "child": {
+    "enabled": false,
+    "parentSlug": ""
   },
   "export": {
     "compress": true,

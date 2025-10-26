@@ -22,7 +22,7 @@ html {
 
 /* stylelint-disable */
 body {
-	background: var(--color-theme-background-dark);
+	background: var(--background-color);
 	/* Fallback for when there is no custom background color defined. */
 }
 /* stylelint-enable */

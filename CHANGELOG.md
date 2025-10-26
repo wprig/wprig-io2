@@ -1,13 +1,56 @@
 # Changelog
 
+## 3.1.0
+ - HMR alternative for BrowserSync added. BrowserSync will now be considered deprecated. Props @robruiz
+ - Added a download local wp cli command to download google fonts to the theme fonts folder. Props @robruiz
+ - Updated rig-init command now provides better DX to devs during new installs. Props @robruiz
+ - Added a new command to convert WP Rig into a child theme build system. Props @robruiz
+ - Added a new command to scaffold new PHP components. Props @robruiz
+ - Removed Gulp from WP Rig. Processes are now replaced with custom script while
+dramatically increasing build and bundle performance. Props @robruiz
+ - Users can now use Bun or Node. Props @robruiz
+ - Now using Github CI/CD pipeline for automated testing. Props @robruiz
+
+## 3.0.3
+ - Reorganization of the CSS source files. Props @robruiz
+ - Fixed js minification and removes obsolete dev dependency. Props @robruiz
+ - Fixed corruption for files during the bundle for filesToCopy files. Props @skywardpro
+ - Minor accessibility improvements to navigation. Props @SinghCod3r
+ - Improvements to eslint system, TS compiling, styles and js minification. Props @erdmann040
+ - Improvements to asset bundling. Props @robruiz
+ - Theme.json file now created when block-based conversion is run. Props @SinghCod3r
+ - New relative image path generation during css transpile. Props @robruiz
+ - Added new cli command to auto-generate menu items. Props @robruiz
+ - Fixed initial tests. All tests should pass now on fresh install. Props @robruiz
+ - Removed outdated/deprecated/unnecessary deps. Props @robruiz
+ - Fixed a bug that caused Gulp to crash frequently. Props @erdmann040
+ - Fixed CSS source maps; now consistent & configurable. Props @erdmann040
+ - Removed package-lock.json from repo. Devs should manually add this. Props @robruiz
+
+## 3.0.2
+
+- Accessibility improvements - Empty main menu items (no-link parent menu items) now change to buttons instead of ) Props @robruiz
+- PHPUnit upgrade and improvements Props @robruiz
+- Added PHP CS Fixer and Rector to code quality checking Props @robruiz
+- Added new composer fix script that runs a sequence of checks using all code quality checks Props @robruiz
+- Added dark mode support to base starter theme Props @robruiz
+
+## 3.0.1
+
+- Updated some packages. Props @robruiz
+- Improved some command line messaging. Props @robruiz
+- Replaced gulp-imagemin and gulp-webp for compatibility reasons. Props @robruiz
+- Now supporting Node v22+. Props @robruiz
+
 ## 3.0.0
 
 - Complete Rewrite of Javascript and CSS build systems. Introduced esbuild and Lightning CSS. Props @robruiz
 - Full Typescript support added. Props @robruiz
 - Added base CSS framework for layout purposes. Props @robruiz
-- Min version of PHP bumpbed to PHP 8. Type checking added. Props @robruiz
+- Min version of PHP bumped to PHP 8. Type checking added. Props @robruiz
 - React-based options/settings page framework for theme devs added. @robruiz
 - Removed support for AMP Plugin. @robruiz
+- Now compatible with up to PHP 8.3. Props @robruiz
 
 ## 2.3.2
 

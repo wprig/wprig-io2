@@ -4,18 +4,20 @@
   "type": "wordpress-theme",
   "license": "GPL-3.0-or-later",
   "require-dev": {
-    "php": ">=7.0",
-    "wp-coding-standards/wpcs": "^3.1.0",
+    "php": ">=8.1",
+    "wp-coding-standards/wpcs": "^3.1",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
     "squizlabs/php_codesniffer": "3.*",
-    "phpunit/phpunit": "^6",
     "brain/monkey": "^2",
     "phpcompatibility/php-compatibility": "^9",
-    "yoast/phpunit-polyfills": "^1.0"
+    "yoast/phpunit-polyfills": "^1.0",
+    "phpunit/phpunit": "^9.5",
+    "rector/rector": "^2.0",
+    "friendsofphp/php-cs-fixer": "^3.67"
   },
   "config": {
     "platform": {
-      "php": "7.0"
+      "php": "8.1"
     },
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
@@ -27,6 +29,13 @@
     }
   },
   "scripts": {
+    "setup-wp-tests": "php tests/phpunit/setup-wp-env.php",
+    "test:unit": "\"vendor/bin/phpunit\"",
+    "test:integration": "\"vendor/bin/phpunit\" -c \"phpunit.integration.xml.dist\"",
+    "test:all": [
+      "@test:unit",
+      "@test:integration"
+    ],
     "install-codestandards": [
       "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
     ],
@@ -39,7 +48,8 @@
     "run-phpcs": [
       "@phpcs-dev"
     ],
-    "phpunit-dev": "\"vendor/bin/phpunit\"",
-    "phpunit-integration-dev": "\"vendor/bin/phpunit\" -c \"phpunit.integration.xml.dist\""
+    "fix": "vendor/bin/rector process && vendor/bin/php-cs-fixer fix && vendor/bin/phpcbf",
+    "phpunit-dev": "@test:unit",
+    "phpunit-integration-dev": "@test:integration"
   }
 }

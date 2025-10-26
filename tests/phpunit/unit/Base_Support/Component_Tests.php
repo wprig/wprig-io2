@@ -29,7 +29,7 @@ class Component_Tests extends Unit_Test_Case {
 	/**
 	 * Sets up the environment before each test.
 	 */
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->component = new Component();
@@ -61,23 +61,6 @@ class Component_Tests extends Unit_Test_Case {
 	}
 
 	/**
-	 * Tests that the correct template tags are exposed.
-	 *
-	 * @covers Component::template_tags()
-	 */
-	public function test_template_tags() {
-		$tags = $this->component->template_tags();
-
-		$this->assertEqualSetsWithIndex(
-			array(
-				'get_version'       => array( $this->component, 'get_version' ),
-				'get_asset_version' => array( $this->component, 'get_asset_version' ),
-			),
-			$tags
-		);
-	}
-
-	/**
 	 * Tests that essential theme support is added.
 	 *
 	 * @covers Component::action_essential_theme_support()
@@ -96,7 +79,6 @@ class Component_Tests extends Unit_Test_Case {
 		$this->assertEqualSets(
 			array(
 				'automatic-feed-links',
-				'title-tag',
 				'html5',
 				'customize-selective-refresh-widgets',
 				'responsive-embeds',

@@ -34,7 +34,6 @@
   & .doc-left {
     & .menu {
       height: 100%;
-      overflow: inherit;
     }
 
     & .cat {
@@ -135,7 +134,7 @@
 
 @media (min-width: 1024px) {
   .wprig-doc-single .doc-grid {
-    grid-template-columns: 280px minmax(0, 1fr) 300px;
+    grid-template-columns: 350px minmax(0, 1fr) 300px;
   }
 
   .wprig-doc-single .doc-left,
