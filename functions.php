@@ -124,7 +124,7 @@ function wprig_generate_heading_id( $text ) {
  */
 function wprig_add_heading_ids( $content ) {
 	// Check if we're on a single documentation page
-	if ( !is_singular( 'page' ) || !has_block( 'wprig/documentation-template' ) ) {
+	if ( !is_singular( 'documentation' ) ) {
 		return $content;
 	}
 

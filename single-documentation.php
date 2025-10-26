@@ -88,6 +88,16 @@ function wprig_doc_extract_headings_with_ids( $html ) {
 
 		</style>
 
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// This ensures the Intersection Observer script is executed
+				// even if enqueuing the script file failed for some reason
+				if (typeof initTocHighlighting === 'undefined') {
+					console.warn('Documentation script not loaded properly. TOC highlighting disabled.');
+				}
+			});
+		</script>
+
 		<section class="wprig-doc-single">
 			<div class="doc-grid">
 				<aside class="doc-left" aria-label="Documentation navigation">

@@ -175,12 +175,11 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			),
 		);
 
-		$js_files[] = array(
-			'wp-rig-authors' => array(
-				'file'   => 'authors.min.js',
-				'global' => true,
-			),
+		$js_files['wp-rig-documentation'] = array(
+			'file'   => 'documentation.min.js',
+			'global' => true,
 		);
+
 
 		/**
 		 * Filters default JS files.
